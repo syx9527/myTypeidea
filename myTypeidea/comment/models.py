@@ -25,4 +25,4 @@ class Comment(models.Model):
         verbose_name_plural = verbose_name = "评论"
 
     def __str__(self):
-        return self.target
+        return self.target.title
