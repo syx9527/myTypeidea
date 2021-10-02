@@ -23,6 +23,9 @@ class Link(models.Model):
     class Meta:
         verbose_name_plural = verbose_name = "友链"
 
+    def __str__(self):
+        return self.title
+
 
 class SideBar(models.Model):
     STATUS_SHOW = 1
@@ -48,3 +51,6 @@ class SideBar(models.Model):
 
     class Meta:
         verbose_name_plural = verbose_name = "侧边栏"
+
+    def __str__(self):
+        return self.title
