@@ -37,9 +37,9 @@ class SideBar(models.Model):
     )
 
     DISPLAY_HTML = 1
-    DISPLAY_LATEST = 1
-    DISPLAY_HOT = 1
-    DISPLAY_COMMENT = 1
+    DISPLAY_LATEST = 2
+    DISPLAY_HOT = 3
+    DISPLAY_COMMENT = 4
 
     SIDE_TYPE = (
         (DISPLAY_HTML, 'HTML'),
