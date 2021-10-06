@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'config.apps.ConfigConfig',
     'comment.apps.CommentConfig',
+
+
+    'xadmin',
+    'crispy_forms',
 ]
 
 # 选择模板
