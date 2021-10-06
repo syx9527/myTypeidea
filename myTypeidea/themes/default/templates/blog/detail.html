@@ -1,15 +1,12 @@
-{% extends "blog/base.html" %}
-
-{% block title %}
-    {{ post.title }}
-{% endblock %}
+{% extends "./base.html" %}
+{% block title %} {{ post.title }} {% endblock %}
 
 {% block main %}
     {% if post %}
         <h1>{{ post.title }}</h1>
         <div>
-            <span>分类:{{ post.category }}</span>
-            <span>作者:{{ post.owner }}</span>
+            <span>分类:{{ post.category.name }}</span>
+            <span>作者:{{ post.owner.username }}</span>
         </div>
         <hr/>
         <p>
@@ -17,4 +14,3 @@
         </p>
     {% endif %}
 {% endblock %}
-
