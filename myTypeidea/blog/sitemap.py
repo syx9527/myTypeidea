@@ -13,7 +13,7 @@ class PostSitemap(Sitemap):
         return Post.objects.filter(status=Post.STATUS_NORMAL)
 
     def lastmod(self, obj):
-        return obj.created_time
+        return obj.create_time
 
     def location(self, obj):
         return reverse('post-detail', args=[obj.pk])
