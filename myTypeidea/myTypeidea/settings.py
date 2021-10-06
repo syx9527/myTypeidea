@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'config.apps.ConfigConfig',
     'comment.apps.CommentConfig',
 
-
+    'django.conf',
     'xadmin',
     'crispy_forms',
 ]
