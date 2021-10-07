@@ -23,6 +23,7 @@ from blog.sitemap import PostSitemap
 from config.views import LinkListView
 from comment.views import CommentView
 from .custom_site import custom_site
+from django.conf import settings
 
 # urlpatterns = [
 #     path('', post_list),
@@ -50,4 +51,5 @@ urlpatterns = [
     url(r'^admin/', custom_site.urls, name='admin'),
     url(r'^rss|feed/', LatestPostFeed(), name='rss'),
     url(r'^sitemap\.xml$', sitemap_views.sitemap, {'sitemaps': {'posts': PostSitemap}}),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 ]
