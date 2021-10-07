@@ -38,10 +38,15 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'config.apps.ConfigConfig',
     'comment.apps.CommentConfig',
-
+    'reversion',
     'django.conf',
     'xadmin',
     'crispy_forms',
+    'dal',
+    'dal_select2',
+
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 
 # 选择模板
@@ -134,3 +139,20 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+XADMIN_TITLE = "TypeIdea管理后台"
+XADMIN_FOOTER_TITLE = "By@AUTOsyx"
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 800,
+        'tabSpaces': 4,
+        'extraPlugins': 'codesnippet',
+    },
+}
+CKEDITOR_UPLOAD_PATH = "article_images"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
