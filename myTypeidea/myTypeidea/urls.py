@@ -25,6 +25,10 @@ from comment.views import CommentView
 from .custom_site import custom_site
 from django.conf import settings
 
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+from django.contrib import staticfiles
+
 # urlpatterns = [
 #     path('', post_list),
 #     path("category/<int:category_id>/", post_list, name='category-list'),
@@ -52,3 +56,5 @@ urlpatterns = [
     url(r'^rss|feed/', LatestPostFeed(), name='rss'),
     url(r'^sitemap\.xml$', sitemap_views.sitemap, {'sitemaps': {'posts': PostSitemap}}),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
